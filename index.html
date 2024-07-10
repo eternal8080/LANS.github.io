@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="A Multi-Modal Neural Geometric Solver with Textual Clauses Parsed from Diagram">
-  <meta name="keywords" content="Geometry problem solving, PGPSNet, Multi-Modal ">
+        content="LANS: A Layout-Aware Neural Solver for Plane Geometry Problem">
+  <meta name="keywords" content="Geometry problem solving, LANS, Multi-Modal ">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>PGPSNet: A Multi-Modal Neural Geometric Solver with Textual Clauses Parsed from Diagram</title>
+  <title>LANS: A Layout-Aware Neural Solver for Plane Geometry Problem</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script> -->
@@ -63,7 +63,7 @@
   </div>
   <div class="navbar-menu">
     <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://arxiv.org/pdf/2302.11097">
+      <a class="navbar-item" href="https://arxiv.org/pdf/2311.16476">
       <span class="icon">
           <i class="fas fa-home"></i>
       </span>
@@ -77,10 +77,10 @@
           <a class="navbar-item" href="https://mathvista.github.io/">
             <b>MathVista</b>
           </a>
-          <a class="navbar-item" href="https://github.com/zzli2022/LANS/tree/main">
-            <b>LANS</b>
+          <a class="navbar-item" href="https://eternal8080.github.io/PGPSNet.github.io/">
+            <b>PGPSNet</b>
           </a>
-          <a class="navbar-item" href="https://eternal8080.github.io/LANS.github.io/">
+          <a class="navbar-item" href="https://eternal8080.github.io/GeoEval.github.io/">
             <b>GeoEval</b>
           </a>
         </div>
@@ -97,8 +97,11 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">A Multi-Modal Neural Geometric Solver with Textual Clauses Parsed from Diagram</h1>
+          <h1 class="title is-1 publication-title">LANS: A Layout-Aware Neural Solver for Plane Geometry Problem</h1>
           <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://mingliangzhang2018.github.io/">Zhong-Zhi Li</a><sup>1,2</sup>,
+            </span>
             <span class="author-block">
               <a href="https://mingliangzhang2018.github.io/">Mingliang Zhang</a><sup>1,2</sup>,
             </span>
@@ -112,17 +115,17 @@
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>MAIS, Institute of Automation of Chinese Academy of Sciences,</span>
-            <span class="author-block"><sup>2</sup>School of Artifcial Intelligence, University of Chinese Academy of Sciences</span>
+            <span class="author-block"><sup>1</sup>School of Artifcial Intelligence, University of Chinese Academy of Sciences,</span>
+            <span class="author-block"><sup>2</sup>MAIS, Institute of Automation of Chinese Academy of Sciences</span>
             <br>
-            <span class="paper-block"><b style="color:#f41c1c">IJCAI 2023</b> </span>
+            <span class="paper-block"><b style="color:#f41c1c">ACL 2024</b> </span>
           </div>
 
           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://arxiv.org/pdf/2302.11097"
+                <a href="https://arxiv.org/pdf/2311.16476"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -131,7 +134,7 @@
                 </a>
               </span>
               <span class="link-block">
-                <a href="https://arxiv.org/abs/2302.11097"
+                <a href="https://arxiv.org/abs/2311.16476"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -141,7 +144,7 @@
               </span>
               <!-- Video Link. -->
               <span class="link-block">
-                <a href="https://github.com/mingliangzhang2018/PGPS"
+                <a href="https://github.com/zzli2022/LANS"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -189,24 +192,23 @@
       <div class="column is-four-fifths">
         <div class="content has-text-justified">
           <p>
-            <b>Geometry problem solving (GPS)</b> involves high-level mathematical reasoning, necessitating the ability to fuse <b>multi-modal</b> information and apply geometric knowledge. Recent neural solvers have shown great potential in this area but struggle with diagram presentation and modal fusion. To address these challenges, we introduce <b>PGPSNet</b>, a neural solver that effectively converts diagrams into basic textual clauses to describe their features. <b>PGPSNet</b> integrates multi-modal information through <b>structural and semantic pre-training</b>, <b>data augmentation</b>, and <b>self-limited decoding</b>. This endows it with rich knowledge of geometric theorems and representations, enhancing geometric understanding and reasoning.          
-          </p>
+            <b>Geometry problem solving (GPS)</b> involves complex mathematical reasoning, requiring multi-modal understanding, fusion, and reasoning. Existing neural solvers treat GPS as a vision-language task but often struggle to represent the rich and complex layout information in geometry diagrams. To address these challenges, we proposed <b>LANS</b>, a layout-aware neural solver.
+            <br>
+            <b>LANS</b> incorporates two innovative modules: the <b>multimodal layout-aware pre-trained language module (MLA-PLM)</b> and <b>layout-aware fusion attention (LA-FA)</b>. <b>MLA-PLM</b> uses structural-semantic pre-training (SSP) for global relationship modeling and point-match pre-training (PMP) to align visual and textual points. <b>LA-FA</b> further enhances layout awareness by employing a layout-aware attention mask for point-guided cross-modal fusion.
+            <br>
+            Extensive experiments on the <b>Geometry3K</b> and <b>PGPS9K</b> datasets validate the effectiveness of these layout-aware modules, demonstrating that <b>LANS</b> significantly outperforms existing symbolic and neural solvers in problem-solving performance.          </p>
           <div id="results-carousel" class="carousel results-carousel">
             <div class="box m-5">
               <div class="content has-text-centered">
-                <img src="static/images/PGPSNet.png" alt="geometric reasoning" width="50%"/>
-                <p> Overview of <b>PGPSNet</b> solver. <b>PGPSNet</b> is a multi-modal
-                  learning framework whose modal inputs contain not only the diagram and textual problem, but also the textual clauses parsed from
-                  diagram. It generates the theorem-based interpretable solution program to solve geometry problem.
+                <img src="static/images/overall_lans.png" alt="geometric reasoning" width="50%"/>
+                <p> Overview of LANS model. The red dotted boxes are our newly proposed modules in comparison to <a href="https://eternal8080.github.io/PGPSNet.github.io/">PGPSNet</a>
                 </p>
               </div>
             </div>
             <div class="box m-5">
               <div class="content has-text-centered">
-                <img src="static/images/pipeline.png" alt="comparison" width="100%"/>
-                <p>Pipeline of structural and semantic pre-training. [M] denotes the mask token. <br>Class tags of [G], [N], [ARG], [P], [ANGID] represent
-                  tokens of general, variable, argument, point and angle ID, respectively. <br>Section tags of [S], [C], [T] refer to tokens of structure, condition and
-                  target, respectively.
+                <img src="static/images/multimodal_layout_aware_pretraining.png" alt="comparison" width="100%"/>
+                <p>Pipeline of multimodal layout-aware pre-training
                 </p>
               </div>
             </div>
@@ -214,7 +216,7 @@
          
           <br><br>
           <p>
-            To support GPS research, we have constructed a large-scale, finely-annotated dataset named <b>PGPS9K</b>, which includes detailed diagram annotations and interpretable solution programs. Our experiments on <b>PGPS9K</b> and the existing <b>Geometry3K</b> dataset demonstrate that <b>PGPSNet</b> significantly outperforms state-of-the-art neural solvers and achieves results comparable to well-designed symbolic solvers. 
+            <b>PGPS9K</b> includes detailed diagram annotations and interpretable solution programs. PGPS9K dataset has fve properties:
           </p>
            
           <ul class="custom-list">
@@ -303,11 +305,22 @@
       <div class="column is-full has-text-centered content">
         <h2 class="title is-3">Examples</h2>
         <p>
-          The annotations of <b>PGPS9K</b> include diagram annotation and solution program, where the diagram annotation is to extract structural and semantic information in diagram and the solution program defines the solution steps of problem. Diagram annotation, textual clauses and solution program are shown as follows.
+          The annotations of <b>PGPS9K</b> include diagram annotation and solution program, where the diagram annotation is to extract structural and semantic information in diagram and the solution program defines the solution steps of problem. The following figures show the characteristic of <b>PGPS9K</b>.
         </p>
     
 
         <div id="results-carousel" class="carousel results-carousel">
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/examples/layout.png" alt="example" width="50%"/>
+              <p> Examples of plane geometry problems. The
+                geometry diagrams (a) and (b) share the same textual
+                problem, <br>structural clauses, and semantic clauses but
+                have different solutions, where structural clauses and
+                semantic<br> clauses are parsed from diagrams. <b>Layout
+                information</b> plays a crucial role in this situation.</p>
+            </div>
+          </div>
           <div class="box m-5">
             <div class="content has-text-centered">
               <img src="static/images/examples/example.png" alt="example" width="80%"/>
@@ -423,205 +436,195 @@
 
     <div class="columns is-centered m-6">
       <div class="column is-full has-text-centered content">
-        <h2 class="title is-3">Numerical answer accuracies of state-of-the-art GPS solvers.</h2>
+        <h2 class="title is-3">Performance comparison among state-of-the-art GPS solvers</h2>
         <!-- <p>One example for each reasoning skill required in <span class="mathvista">MathVista</span></p> -->
-        <table class="js-sort-table" id="results">
-          <thead>
-            <tr>
-              <th class="js-sort-number" style="vertical-align: middle; color: gray;">Method</th>
-              <th colspan="3" style="color: gray;">Geometry3K</th>
-              <th colspan="3" style="color: gray;">PGPS9K</th>
-            </tr>
-            <tr>
-              <th></th>
-              <th class="js-sort-number" style="color: gray;">Completion</th>
-              <th class="js-sort-number" style="color: gray;">Choice</th>
-              <th class="js-sort-number" style="color: gray;">Top-3</th>
-              <th class="js-sort-number" style="color: gray;"><b>Completion<b></th>
-              <th class="js-sort-number" style="color: gray;">Choice</th>
-              <th class="js-sort-number" style="color: gray;">Top-3</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Human Expert [Lu et al., 2021]</td>
-              <td>-</td>
-              <td>90.9</td>
-              <td>-</td>
-              <td>-</td>
-              <td>-</td>
-              <td>-</td>
-            </tr>
-            <tr>
-              <td>Baseline (Neural Solver) [Lu et al., 2021]</td>
-              <td>-</td>
-              <td>35.9</td>
-              <td>-</td>
-              <td>-</td>
-              <td>-</td>
-              <td>-</td>
-            </tr>
-            <tr>
-              <td>InterGPS (Predict)* [Lu et al., 2021]</td>
-              <td>44.6</td>
-              <td>56.9</td>
-              <td>-</td>
-              <td>-</td>
-              <td>-</td>
-              <td>-</td>
-            </tr>
-            <tr>
-              <td>InterGPS (Diagram GT)* [Lu et al., 2021]</td>
-              <td>64.2</td>
-              <td>71.7</td>
-              <td>-</td>
-              <td>-</td>
-              <td>-</td>
-              <td>-</td>
-            </tr>
-            <tr>
-              <td>InterGPS (All GT)* [Lu et al., 2021]</td>
-              <td><b class="best-score-text">69.0</b></td>
-              <td>75.9</td>
-              <td>-</td>
-              <td>-</td>
-              <td>-</td>
-              <td>-</td>
-            </tr>
-            <tr>
-              <td>NGS# [Chen et al., 2021]</td>
-              <td>35.3</td>
-              <td>58.8</td>
-              <td>62.0</td>
-              <td>34.1</td>
-              <td>46.1</td>
-              <td>60.9</td>
-            </tr>
-            <tr>
-              <td>Geoformer# [Chen et al., 2022]</td>
-              <td>36.8</td>
-              <td>59.3</td>
-              <td>62.5</td>
-              <td>35.6</td>
-              <td>47.3</td>
-              <td>62.3</td>
-            </tr>
-            <tr>
-              <td>PGPSNet</td>
-              <td>65.0</td>
-              <td><b class="best-score-text">77.9</b></td>
-              <td><b class="best-score-text">80.7</b></td>
-              <td><b class="best-score-text">62.7</b></td>
-              <td><b class="best-score-text">70.4</b></td>
-              <td><b class="best-score-text">79.5</b></td>
-            </tr>
-          </tbody>
-        </table>
-        
-    
-        * denotes results re-produced with the authors' code. <br>
-        # denotes methods re-implemented by us. 
+
+<table class="js-sort-table" id="results">
+  <thead>
+    <tr>
+      <th rowspan="2" class="js-sort-number" style="vertical-align: middle; color: gray;">Method</th>
+      <th colspan="3" class="js-sort-number" style="vertical-align: middle; color: gray;">Geometry3K</th>
+      <th colspan="3" class="js-sort-number" style="vertical-align: middle; color: gray;">PGPS9K</th>
+      <th rowspan="2" class="js-sort-number" style="vertical-align: middle; color: gray;">Parameters</th>
+    </tr>
+    <tr>
+      <th class="js-sort-number" style="vertical-align: middle; color: gray;">Completion</th>
+      <th class="js-sort-number" style="vertical-align: middle; color: gray;">Choice</th>
+      <th class="js-sort-number" style="vertical-align: middle; color: gray;">Top-3</th>
+      <th class="js-sort-number" style="vertical-align: middle; color: gray;">Completion</th>
+      <th class="js-sort-number" style="vertical-align: middle; color: gray;">Choice</th>
+      <th class="js-sort-number" style="vertical-align: middle; color: gray;">Top-3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Human Expert (Lu et al., 2021)</td>
+      <td>-</td>
+      <td>90.9</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>InterGPS (Predict)* (Lu et al., 2021)</td>
+      <td>44.6</td>
+      <td>56.9</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>InterGPS (Diagram GT)* (Lu et al., 2021)</td>
+      <td>64.2</td>
+      <td>71.7</td>
+      <td>-</td>
+      <td>59.8</td>
+      <td>68.0</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>InterGPS (All GT)* (Lu et al., 2021)</td>
+      <td>69.0</td>
+      <td>75.9</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>GeoDRL (Predict) (Peng et al., 2023)</td>
+      <td>-</td>
+      <td>68.4</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>Baseline (Neural Solver) (Lu et al., 2021)</td>
+      <td>-</td>
+      <td>35.9</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>80M</td>
+    </tr>
+    <tr>
+      <td>NGS& (Chen et al., 2021)</td>
+      <td>35.3</td>
+      <td>58.8</td>
+      <td>62.0</td>
+      <td>34.1</td>
+      <td>46.1</td>
+      <td>60.9</td>
+      <td>267M</td>
+    </tr>
+    <tr>
+      <td>Geoformer& (Chen et al., 2022)</td>
+      <td>36.8</td>
+      <td>59.3</td>
+      <td>62.5</td>
+      <td>35.6</td>
+      <td>47.3</td>
+      <td>62.3</td>
+      <td>&gt;310M</td>
+    </tr>
+    <tr>
+      <td>SCA-GPS (Ning et al., 2023)</td>
+      <td>-</td>
+      <td>76.7</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>PGPSNet (Zhang et al., 2023)</td>
+      <td>65.0</td>
+      <td>77.9</td>
+      <td>80.7</td>
+      <td>62.7</td>
+      <td>70.4</td>
+      <td>79.5</td>
+      <td>23M</td>
+    </tr>
+    <tr>
+      <td>LLAVA-v1.5 (Liu et al., 2023b)</td>
+      <td>7.6</td>
+      <td>11.2</td>
+      <td>-</td>
+      <td>6.3</td>
+      <td>9.1</td>
+      <td>-</td>
+      <td>7B</td>
+    </tr>
+    <tr>
+      <td>mPLUG-Owl2 (Ye et al., 2023)</td>
+      <td>12.1</td>
+      <td>17.4</td>
+      <td>-</td>
+      <td>10.1</td>
+      <td>13.1</td>
+      <td>-</td>
+      <td>7B</td>
+    </tr>
+    <tr>
+      <td>Qwen-VL (Bai et al., 2023)</td>
+      <td>22.1</td>
+      <td>26.7</td>
+      <td>-</td>
+      <td>20.1</td>
+      <td>23.2</td>
+      <td>-</td>
+      <td>7B</td>
+    </tr>
+    <tr>
+      <td>GPT-4V (Achiam et al., 2023a)</td>
+      <td>38.7</td>
+      <td>41.4</td>
+      <td>-</td>
+      <td>30.2</td>
+      <td>35.7</td>
+      <td>-</td>
+      <td>7B</td>
+    </tr>
+    <tr>
+      <td>LANS (ours)</td>
+      <td><b class="best-score-text">72.1</b></td>
+      <td><b class="best-score-text">82.3</b></td>
+      <td><b class="best-score-text">82.8</b></td>
+      <td><b class="best-score-text">66.7</b></td>
+      <td><b class="best-score-text">74.0</b></td>
+      <td><b class="best-score-text">82.2</b></td>
+      <td>26M</td>
+    </tr>
+  </tbody>
+</table>
+
        
 
 
         <h2 class="title is-3">Ablation studies on Geometry3K.</h2>
-        <table class="js-sort-table" id="results">
-          <thead>
-            <tr>
-              <th rowspan="2" class="js-sort-number" style="vertical-align: middle; color: gray;">Self-limited Decoder</th>
-              <th rowspan="2" class="js-sort-number" style="vertical-align: middle; color: gray;">Data Aug</th>
-              <th rowspan="2" class="js-sort-number" style="vertical-align: middle; color: gray;">Structural Clauses</th>
-              <th rowspan="2" class="js-sort-number" style="vertical-align: middle; color: gray;">Pre-trained LM</th>
-              <th colspan="3" class="js-sort-number" style="vertical-align: middle; color: gray;">Ans acc</th>
-              <th colspan="3" class="js-sort-number" style="vertical-align: middle; color: gray;">Prog acc</th>
-            </tr>
-            <tr>
-              <th class="js-sort-number" style="vertical-align: middle; color: gray;">Completion</th>
-              <th class="js-sort-number" style="vertical-align: middle; color: gray;">Choice</th>
-              <th class="js-sort-number" style="vertical-align: middle; color: gray;">Top-3</th>
-              <th class="js-sort-number" style="vertical-align: middle; color: gray;">Completion</th>
-              <th class="js-sort-number" style="vertical-align: middle; color: gray;">Choice</th>
-              <th class="js-sort-number" style="vertical-align: middle; color: gray;">Top-3</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>✔</td>
-              <td>✘</td>
-              <td>✔</td>
-              <td>✘</td>
-              <td>32.5</td>
-              <td>52.2</td>
-              <td>57.6</td>
-              <td>27.2</td>
-              <td>47.3</td>
-              <td>53.1</td>
-            </tr>
-            <tr>
-              <td>✘</td>
-              <td>✔</td>
-              <td>✔</td>
-              <td>✘</td>
-              <td>28.2</td>
-              <td>48.3</td>
-              <td>50.7</td>
-              <td>25.4</td>
-              <td>42.7</td>
-              <td>45.6</td>
-            </tr>
-            <tr>
-              <td>✔</td>
-              <td>✔</td>
-              <td>✔</td>
-              <td>✘</td>
-              <td>36.6</td>
-              <td>59.5</td>
-              <td>62.4</td>
-              <td>33.9</td>
-              <td>52.8</td>
-              <td>58.6</td>
-            </tr>
-            <tr>
-              <td>✔</td>
-              <td>✔</td>
-              <td>✘</td>
-              <td>✘</td>
-              <td>38.4</td>
-              <td>61.7</td>
-              <td>64.8</td>
-              <td>34.8</td>
-              <td>54.2</td>
-              <td>59.2</td>
-            </tr>
-            <tr>
-              <td>✔</td>
-              <td>✔</td>
-              <td>✔</td>
-              <td>✔</td>
-              <td>48.1</td>
-              <td>67.5</td>
-              <td>71.4</td>
-              <td>45.4</td>
-              <td>62.0</td>
-              <td>68.1</td>
-            </tr>
-            <tr>
-              <td>✔</td>
-              <td>✔</td>
-              <td>✔</td>
-              <td>✔</td>
-              <td><b class="best-score-text">65.0</b></td>
-              <td><b class="best-score-text">77.9</b></td>
-              <td><b class="best-score-text">80.7</b></td>
-              <td><b class="best-score-text">62.8</b></td>
-              <td><b class="best-score-text">72.4</b></td>
-              <td><b class="best-score-text">78.2</b></td>
-            </tr>
-          </tbody>
-        </table>
-
+        
+        <section class="hero teaser">
+          <div class="container is-max-desktop">
+            <div class="content has-text-centered">
+              <img src="static/images/results-figures/ablation.png" alt="geometric reasoning" width="100%"/>
+              <p>  Ablation study of modules, pre-training strategies and attention mask on Geometry3K.</p>
+            </div>
+          </div>
+        </section>
         <div>
-          <p>🚨 For more details, please refer to <a href="https://arxiv.org/pdf/2302.11097">this link</a> 
+          <p>🚨 For more details, please refer to <a href="https://arxiv.org/pdf/2311.16476">this link</a> 
           </p>
         </div>
         </div>
@@ -815,11 +818,11 @@
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title is-3 has-text-centered">BibTeX</h2>
-    <pre><code>@inproceedings{Zhang2023PGPS,
-      title     = {A Multi-Modal Neural Geometric Solver with Textual Clauses Parsed from Diagram},
-      author    = {Zhang, Ming-Liang and Yin, Fei and Liu, Cheng-Lin},
-      booktitle = {IJCAI},
-      year      = {2023},
+    <pre><code>@article{zhang2023lans,
+      title={LANS: A layout-aware neural solver for plane geometry problem},
+      author={Zhang, Ming-Liang and Li, Zhong-Zhi and Yin, Fei and Liu, Cheng-Lin},
+      journal={arXiv preprint arXiv:2311.16476},
+      year={2023}
     }
     </code></pre>
   </div>
