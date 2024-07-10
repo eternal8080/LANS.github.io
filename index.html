@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="GeoEval: Benchmark for Evaluating LLMs and Multi-Modal Models on Geometry Problem-Solving">
-  <meta name="keywords" content="LLMs, GeoEval">
+        content="A Multi-Modal Neural Geometric Solver with Textual Clauses Parsed from Diagram">
+  <meta name="keywords" content="Geometry problem solving, PGPSNet, Multi-Modal ">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>GeoEval: Benchmark for Evaluating LLMs and Multi-Modal Models on Geometry Problem-Solving</title>
+  <title>PGPSNet: A Multi-Modal Neural Geometric Solver with Textual Clauses Parsed from Diagram</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script> -->
@@ -63,7 +63,7 @@
   </div>
   <div class="navbar-menu">
     <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://arxiv.org/pdf/2402.10104v2">
+      <a class="navbar-item" href="https://arxiv.org/pdf/2302.11097">
       <span class="icon">
           <i class="fas fa-home"></i>
       </span>
@@ -80,8 +80,8 @@
           <a class="navbar-item" href="https://github.com/zzli2022/LANS/tree/main">
             <b>LANS</b>
           </a>
-          <a class="navbar-item" href="https://github.com/mingliangzhang2018/PGPS">
-            <b>PGPSNet</b>
+          <a class="navbar-item" href="https://eternal8080.github.io/LANS.github.io/">
+            <b>GeoEval</b>
           </a>
         </div>
       </div>
@@ -97,36 +97,32 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">GeoEval: Benchmark for Evaluating LLMs and Multi-Modal Models on Geometry Problem-Solving</h1>
+          <h1 class="title is-1 publication-title">A Multi-Modal Neural Geometric Solver with Textual Clauses Parsed from Diagram</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://knightzhang625.github.io/">Jiaxin Zhang</a><sup>2</sup>,</span>
-            <span class="author-block">
-              <a href="https://zzli2022.github.io/">Zhongzhi Li</a><sup>1</sup>,</span>
-            <span class="author-block">
-              <a href="https://mingliangzhang2018.github.io/">Mingliang Zhang</a><sup>1</sup>,
+              <a href="https://mingliangzhang2018.github.io/">Mingliang Zhang</a><sup>1,2</sup>,
             </span>
             <span class="author-block">
-              <a href="https://nlpr.ia.ac.cn/pal/People/YinFei.html">Fei Yin</a><sup>1</sup>,
+              <a href="https://nlpr.ia.ac.cn/pal/People/YinFei.html">Fei Yin</a><sup>1,2</sup>,
             </span>
             <span class="author-block">
-              <a href="https://nlpr.ia.ac.cn/liucl/">Chenglin Liu</a><sup>1</sup>,
+              <a href="https://nlpr.ia.ac.cn/liucl/">Chenglin Liu</a><sup>1,2</sup>,
             </span>
-            <span class="author-block">
-              <a href="https://www.strath.ac.uk/staff/moshfeghiyashardr/">Yashar Moshfeghi</a><sup>2</sup>,
-            </span>
+           
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>Chinese Academy of Sciences,</span>
-            <span class="author-block"><sup>2</sup>University of Strathclyde</span>
+            <span class="author-block"><sup>1</sup>MAIS, Institute of Automation of Chinese Academy of Sciences,</span>
+            <span class="author-block"><sup>2</sup>School of Artifcial Intelligence, University of Chinese Academy of Sciences</span>
+            <br>
+            <span class="paper-block"><b style="color:#f41c1c">IJCAI 2023</b> </span>
           </div>
 
           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://arxiv.org/pdf/2402.10104"
+                <a href="https://arxiv.org/pdf/2302.11097"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -135,7 +131,7 @@
                 </a>
               </span>
               <span class="link-block">
-                <a href="https://arxiv.org/abs/2402.10104"
+                <a href="https://arxiv.org/abs/2302.11097"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -145,7 +141,7 @@
               </span>
               <!-- Video Link. -->
               <span class="link-block">
-                <a href="https://github.com/GeoEval/GeoEval"
+                <a href="https://github.com/mingliangzhang2018/PGPS"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -155,7 +151,7 @@
               </span>
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/GeoEval/GeoEval"
+                <a href="https://nlpr.ia.ac.cn/databases/CASIA-PGPS9K/"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="far fa-images"></i>
@@ -175,18 +171,15 @@
 
 
 
- <section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="content has-text-centered">
-      <img src="static/images/lidia.jpg" alt="geometric reasoning" width="99%"/>
-      <p> The performance of models across various subjects, revealing distinct strengths. The WizardMath-7B model significantly outperforms others in flat geometry problems, such as length
-        and lines. Conversely, in solid geometry problems like cuboids and spheres, GPT-4V surpasses WizardMath-7B, indicating its superior capability in addressing solid geometry questions.
-      </p>
-    </div>
+<section class="hero is-light is-small">
+  <div class="hero-body has-text-centered">
+    <!-- <h1 class="title is-1 mathvista"><img src="static/images/mathvista.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>MathVista Dataset</h1> -->
+  <h1 class="title is-1 mathvista">
+    <!--<img src="static/images/mathvista.png" style="width:1em;vertical-align: middle" alt="Logo"/>-->
+    <span class="mathvista" style="vertical-align: middle">Introduction</span>
+  </h1>
   </div>
-</section> 
-
-
+</section>
 
 
 <section class="section">
@@ -194,25 +187,42 @@
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Introduction</h2>
         <div class="content has-text-justified">
           <p>
-            This project comprises a  <b>LLM evaluation</b> of <b>Geometry Problem Solving</b> methods and the construction of comprehensive datasets. The aim is to advance the field of solving geometry problems. The project is focused on the construction of datasets in the field of geometry problem solving and to provide a comprehensive evaluation of current large language models.
+            <b>Geometry problem solving (GPS)</b> involves high-level mathematical reasoning, necessitating the ability to fuse <b>multi-modal</b> information and apply geometric knowledge. Recent neural solvers have shown great potential in this area but struggle with diagram presentation and modal fusion. To address these challenges, we introduce <b>PGPSNet</b>, a neural solver that effectively converts diagrams into basic textual clauses to describe their features. <b>PGPSNet</b> integrates multi-modal information through <b>structural and semantic pre-training</b>, <b>data augmentation</b>, and <b>self-limited decoding</b>. This endows it with rich knowledge of geometric theorems and representations, enhancing geometric understanding and reasoning.          
           </p>
+          <div id="results-carousel" class="carousel results-carousel">
+            <div class="box m-5">
+              <div class="content has-text-centered">
+                <img src="static/images/PGPSNet.png" alt="geometric reasoning" width="50%"/>
+                <p> Overview of <b>PGPSNet</b> solver. <b>PGPSNet</b> is a multi-modal
+                  learning framework whose modal inputs contain not only the diagram and textual problem, but also the textual clauses parsed from
+                  diagram. It generates the theorem-based interpretable solution program to solve geometry problem.
+                </p>
+              </div>
+            </div>
+            <div class="box m-5">
+              <div class="content has-text-centered">
+                <img src="static/images/pipeline.png" alt="comparison" width="100%"/>
+                <p>Pipeline of structural and semantic pre-training. [M] denotes the mask token. <br>Class tags of [G], [N], [ARG], [P], [ANGID] represent
+                  tokens of general, variable, argument, point and angle ID, respectively. <br>Section tags of [S], [C], [T] refer to tokens of structure, condition and
+                  target, respectively.
+                </p>
+              </div>
+            </div>
+          </div>
+         
+          <br><br>
           <p>
-            The <b>GeoEval</b> benchmark is specifically designed for assessing the ability of models in resolving geometric math problems. This benchmark features five characteristics: Comprehensive Variety, Varied Problems, Dual Inputs, Diverse Challenges, and Complexity Ratings.
+            To support GPS research, we have constructed a large-scale, finely-annotated dataset named <b>PGPS9K</b>, which includes detailed diagram annotations and interpretable solution programs. Our experiments on <b>PGPS9K</b> and the existing <b>Geometry3K</b> dataset demonstrate that <b>PGPSNet</b> significantly outperforms state-of-the-art neural solvers and achieves results comparable to well-designed symbolic solvers. 
           </p>
-          <p>
-            For an insightful contrast, we offer a comparative analysis of <b>GeoEval</b> against earlier datasets.
-          </p>
-          <p>
-            For an insightful contrast, we offer a comparative analysis of <b>GeoEval</b> against earlier datasets. <b>GeoEval</b> Benchmark Features Comprehensive Variety: The benchmark covers a wide range of geometric topics, providing a comprehensive test for models.
-          </p>
+           
           <ul class="custom-list">
-            <li><b>Varied Problems:</b> Problems in the benchmark are varied, testing the model's ability to handle different types of geometric problems.</li>
-            <li><b>Dual Inputs:</b> The benchmark includes both text and diagram inputs, testing the model's ability to process and integrate information from different sources.</li>
-            <li><b>Diverse Challenges:</b> The benchmark poses diverse challenges, testing the model's ability to handle complex and varied geometric problems.</li>
-            <li><b>Complexity Ratings:</b> The benchmark includes problems of different complexity levels, allowing for a nuanced assessment of the model's capabilities.</li>
+            <li><b>Theorem-based:</b> Solving problems in PGPS9K need to apply geometric theorem knowledge to carry out algebraic calculation and get numerical results finally.</li>
+            <li><b>Diagram-dependent:</b> Above 90% of problems must be solved using the diagrams because necessary conditions such as variable content and geometric structure are displayed via visual form instead of text.</li>
+            <li><b>Abstract:</b> The diagram is integrated with basic geometric primitives (point, line, circle) and non-geometric primitives (text, symbol). No complex semantic scenarios are involved in textual problem except abstract geometric conditions.</li>
+            <li><b>Fine-grained:</b> Problems with the same diagram vary in conditions or targets. Slight distinctions in textual problems usually lead to completely different solutions to problems.</li>
+            <li><b>Condition-redundancy:</b> Lots of conditions in semantic clauses or textual problem are not needed in problem solving at hand.</li>
           </ul>
         </div>
       </div>
@@ -221,117 +231,6 @@
 </div>
 </section>
 
-<section class="section">
-  <div class="container">
-    
-    <div class="columns is-centered">
-      <div class="column is-full has-text-centered content">
-
-      
-
-        <h2 class="title is-3" id="leaderboard_test">Leaderboard on GeoEval</h2>
-        <div class="content">
-          <p class="mt-3">Accuracy scores of models on our <b>GeoEval</b> benchmark</p>
-
-          <table class="js-sort-table" id="results">
-            <tr>
-              <th class="js-sort-number">Model</th>
-              <th class="js-sort-number">GeoEval-2000 (A/T %)</th>
-              <th class="js-sort-number">GeoEval-backward (A %)</th>
-              <th class="js-sort-number">GeoEval-aug (A %)</th>
-              <th class="js-sort-number">GeoEval-hard (A %)</th>
-            </tr>
-            <tr>
-              <td>CodeGen2-16B ◇</td>
-              <td>28.76 / 22.06</td>
-              <td>5.10</td>
-              <td>8.50</td>
-              <td>5.66</td>
-            </tr>
-            <tr>
-              <td>GPT-3.5 ◇</td>
-              <td>24.71 / 21.27</td>
-              <td>22.66</td>
-              <td>41.25</td>
-              <td>22.33</td>
-            </tr>
-            <tr>
-              <td>GPT-4 ◇</td>
-              <td>27.95 / 43.86</td>
-              <td>26.00</td>
-              <td>45.75</td>
-              <td>10.10</td>
-            </tr>
-            <tr>
-              <td>WizardMath-70B ◇</td>
-              <td><b class="best-score-text">55.67 / 34.20</b></td>
-              <td>28.66</td>
-              <td>37.75</td>
-              <td>6.00</td>
-            </tr>
-            <tr>
-              <td>WizardMath-7B-V1.1 ◇</td>
-              <td>54.78 / 32.76</td>
-              <td>32.66</td>
-              <td><b class="best-score-text">47.75</b></td>
-              <td>6.00</td>
-            </tr>
-            <tr>
-              <td>Llava-7B-V1.5</td>
-              <td>12.80 / 21.01</td>
-              <td>11.33</td>
-              <td>20.25</td>
-              <td>20.30</td>
-            </tr>
-            <tr>
-              <td>Qwen-VL</td>
-              <td>25.60 / 25.97</td>
-              <td>5.66</td>
-              <td>22.25</td>
-              <td>21.66</td>
-            </tr>
-            <tr>
-              <td>mPLUG-Owl2</td>
-              <td>37.76 / n/a</td>
-              <td><b class="best-score-text">35.33</b></td>
-              <td>38.00</td>
-              <td>22.66</td>
-            </tr>
-            <tr>
-              <td>InstructBLIP †</td>
-              <td>52.18 / n/a</td>
-              <td>15.66</td>
-              <td>35.00</td>
-              <td><b class="best-score-text">70.30</b></td>
-            </tr>
-            <tr>
-              <td>GPT-4V</td>
-              <td>37.22 / 43.86 ‡</td>
-              <td>26.00</td>
-              <td>45.75</td>
-              <td>10.10</td>
-            </tr>                                               
-        </table>
-
-          <b>◇:</b> All LLMs,  <b>A:</b> the overall accuracy across all problems
-          <br>
-          <b>T:</b>  accuracy for problems containing only texts without diagrams,
-          <b>n/a:</b> scores are unavailable due to models cannot process text-only inputs
-          <br>
-          <b>†:</b> doubt on the high accuracy rates reported by the IntructBLIP model,
-          <b>‡:</b>  accuracy figures for GPT-4V are derived from GPT-4
-          <br>
-          <div>
-          <p>🚨 For more details, please refer to <a href="https://github.com/GeoEval/GeoEval">this link</a> 
-          </p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-  </div>
-</section>
 
 <!-- DATASET SECTION -->
 <section class="hero is-light is-small">
@@ -339,7 +238,7 @@
     <!-- <h1 class="title is-1 mathvista"><img src="static/images/mathvista.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>MathVista Dataset</h1> -->
   <h1 class="title is-1 mathvista">
     <!--<img src="static/images/mathvista.png" style="width:1em;vertical-align: middle" alt="Logo"/>-->
-    <span class="mathvista" style="vertical-align: middle">GeoEval Dataset</span>
+    <span class="mathvista" style="vertical-align: middle">PGPS9K Dataset</span>
   </h1>
   </div>
 </section>
@@ -360,31 +259,23 @@
         <h2 class="title is-3">Overview</h2>
         <div class="content has-text-justified">
           <p>
-            The <span class="mathvista">GeoEval</span> benchmark is structured into four subsets: <b>GeoEval-2000</b>, comprising 2,000 problems; <b>GeoEval-backward</b>, with 750 problems; <b>GeoEvalaug</b>, containing 2,000 problems; and <b>GeoEval-hard</b>, including 300 problems.
-            <br><br>
-            A total of 24,912 problems were collected from Geometry3K, PGPS9K, UniGeo, GeoQA+, GeometryQA, and geometry problems from the MATH and MathQA datasets. From these, 2,000 geometry math problems were selected to create the <b>GeoEval-2000</b> subset.
-            <br><br>
-            <b>GeoEval-backward</b> problems start with the answers from forward problems, posing queries to find hidden numbers. From the GeoEval-2000 subset, 750 problems were selected and backward questions were created.
-            <br><br>
-            To evaluate model resilience and prevent data leakage during pre-training, a context learning strategy rephrases problems from the GeoEval-2000 subset to make <b>GeoEvalaug</b>. Each problem is rephrased into five variants by GPT-3.5.
-            <br><br>
-            The <b>GeoEval-hard</b> subset includes 300 solid and analytic geometry problems. These were selected from an initial pool of approximately 10,000 problems through web scraping, followed by a refined manual review process.
-            <!-- a compilation of data 1) carefully examined and filtered from 28 existing VQA and MathQA datasets and 2) manually collected by us. In total, 6,141 examples were collected from 31 different datasets. -->
+            The <b>Plane Geometry Problem Solving Dataset (PGPS9K)</b> was constructed by the State Key Laboratory of Multimodal Artificial Intelligence Systems (MAIS), <a href="http://www.ia.cas.cn/">Institute of Automation of Chinese Academy of Sciences</a>(CASIA). The samples in <b>PGPS9K</b> are labeled with both fine-grained diagram annotation and interpretable solution program, where the diagram annotation is converted into structural clauses and semantic clauses to effectively describe multi-level information in geometry diagram.
+          </p>
+          <p>
+            <span class="mathvista">PGPS9K</span> is composed of 9,022 geometry problems paired with non-duplicate 4,000 geometry diagrams, where 2,891 problems paired with 1,738 diagrams are selected from <a href="https://lupantech.github.io/inter-gps/">Geometry3K dataset</a>, the rest of problems are collected from five popular textbooks across grades 6-12 on <a href="https://www.mheducation.com/">mathematics curriculum websites</a>. Our <b>PGPS9K</b> is divided into 30 problem types as exhibited in the following figure, covering almost all problem types of plane geometry problem in corresponding grades.
           </p>
 
           <div id="results-carousel" class="carousel results-carousel">
             <div class="box m-5">
               <div class="content has-text-centered">
-                <img src="static/images/distributions.jpg" alt="distribution" width="80%"/>
-                <p> Visualization of the proportional contributions and varied distribution of geometric shapes of these source datasets to the GeoEval-2000 subset, showcasing the variety and scope of the geometry problems collected from each source.</p>
+                <img src="static/images/distributions.png" alt="distribution" width="80%"/>
+                <p> Distribution of problem types of PGPS9K dataset.</p>
               </div>
             </div>
             <div class="box m-5">
               <div class="content has-text-centered">
                 <img src="static/images/Comparison.png" alt="comparison" width="100%"/>
-                <p>Comparison between <span class="mathvista">GeoEval</span> benchmark and other datasets
-                  <br>
-                  <span class="mathvista">GeoEval</span> includes problems from seven public datasets and three newly created ones
+                <p>Comparison with existing GPS datasets. <br>Type, OP and PL represent problem type, operator number and program length, respectively.
                 </p>
               </div>
             </div>
@@ -411,26 +302,35 @@
     <div class="columns is-centered m-6">
       <div class="column is-full has-text-centered content">
         <h2 class="title is-3">Examples</h2>
-        <p>Examples from different perspectives in
-          <span class="mathvista">GeoEval</span></p>
+        <p>
+          The annotations of <b>PGPS9K</b> include diagram annotation and solution program, where the diagram annotation is to extract structural and semantic information in diagram and the solution program defines the solution steps of problem. Diagram annotation, textual clauses and solution program are shown as follows.
+        </p>
+    
 
         <div id="results-carousel" class="carousel results-carousel">
           <div class="box m-5">
             <div class="content has-text-centered">
-              <img src="static/images/examples/example.png" alt="example" width="50%"/>
-              <p> Unique examples of our GeoEval benchmark</p>
+              <img src="static/images/examples/example.png" alt="example" width="80%"/>
+              <p>Example presentation of PGPS9K dataset.</p>
             </div>
           </div>
           <div class="box m-5">
             <div class="content has-text-centered">
-              <img src="static/images/examples/flat.png" alt="example" width="60%"/>
-              <p>Examples of the flat geometry problem, the analytic geometry problem, and the solid geometry problem</p>
+              <img src="static/images/examples/templates.png" alt="example" width="100%"/>
+              <p> Templates of textual clauses. The symbols of &, *, $, % denote point, line, variable and angle ID, respectively</p>
             </div>
           </div>
           <div class="box m-5">
             <div class="content has-text-centered">
-              <img src="static/images/examples/four.png" alt="example" width="60%"/>
-              <p>Examples of GeoEval-2000, GeoEval-backward, GeoEval-aug, GeoEval-hard subsets</p>
+              <img src="static/images/examples/solution program.png" alt="example" width="45%"/>
+              <p>Annotation of solution program and its interpretability</p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/examples/oprator.png" alt="example" width="100%"/>
+              <p>Program sets defined in our solution program, consisting of 34 operators and 55 operands, <br>where operands involve 11 problem
+                variables, 7 process variables, 26 augments and 11 constants</p>
             </div>
           </div>
          
@@ -523,28 +423,207 @@
 
     <div class="columns is-centered m-6">
       <div class="column is-full has-text-centered content">
-        <h2 class="title is-3">Results on Existing Foundation Models</h2>
+        <h2 class="title is-3">Numerical answer accuracies of state-of-the-art GPS solvers.</h2>
         <!-- <p>One example for each reasoning skill required in <span class="mathvista">MathVista</span></p> -->
-        <div id="results-carousel" class="carousel results-carousel">
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/results-figures/length.png" alt="result" width="80%"/>
-              <p>Models performances on GeoEval-2000 subset according to different question lengths</p>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/results-figures/difficult.png" alt="result" width="70%"/>
-              <p>Model performances on GeoEval-2000 subset according to different complexity levels</p>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/results-figures/external knowledge.png" alt="result" width="80%"/>
-              <p>Comparison of models requiring external knowledge ("w" in blue color) and those do not ("w/o" in orange color).</p>
-            </div>
-          </div>
-          
+        <table class="js-sort-table" id="results">
+          <thead>
+            <tr>
+              <th class="js-sort-number" style="vertical-align: middle; color: gray;">Method</th>
+              <th colspan="3" style="color: gray;">Geometry3K</th>
+              <th colspan="3" style="color: gray;">PGPS9K</th>
+            </tr>
+            <tr>
+              <th></th>
+              <th class="js-sort-number" style="color: gray;">Completion</th>
+              <th class="js-sort-number" style="color: gray;">Choice</th>
+              <th class="js-sort-number" style="color: gray;">Top-3</th>
+              <th class="js-sort-number" style="color: gray;"><b>Completion<b></th>
+              <th class="js-sort-number" style="color: gray;">Choice</th>
+              <th class="js-sort-number" style="color: gray;">Top-3</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Human Expert [Lu et al., 2021]</td>
+              <td>-</td>
+              <td>90.9</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>Baseline (Neural Solver) [Lu et al., 2021]</td>
+              <td>-</td>
+              <td>35.9</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>InterGPS (Predict)* [Lu et al., 2021]</td>
+              <td>44.6</td>
+              <td>56.9</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>InterGPS (Diagram GT)* [Lu et al., 2021]</td>
+              <td>64.2</td>
+              <td>71.7</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>InterGPS (All GT)* [Lu et al., 2021]</td>
+              <td><b class="best-score-text">69.0</b></td>
+              <td>75.9</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>NGS# [Chen et al., 2021]</td>
+              <td>35.3</td>
+              <td>58.8</td>
+              <td>62.0</td>
+              <td>34.1</td>
+              <td>46.1</td>
+              <td>60.9</td>
+            </tr>
+            <tr>
+              <td>Geoformer# [Chen et al., 2022]</td>
+              <td>36.8</td>
+              <td>59.3</td>
+              <td>62.5</td>
+              <td>35.6</td>
+              <td>47.3</td>
+              <td>62.3</td>
+            </tr>
+            <tr>
+              <td>PGPSNet</td>
+              <td>65.0</td>
+              <td><b class="best-score-text">77.9</b></td>
+              <td><b class="best-score-text">80.7</b></td>
+              <td><b class="best-score-text">62.7</b></td>
+              <td><b class="best-score-text">70.4</b></td>
+              <td><b class="best-score-text">79.5</b></td>
+            </tr>
+          </tbody>
+        </table>
+        
+    
+        * denotes results re-produced with the authors' code. <br>
+        # denotes methods re-implemented by us. 
+       
+
+
+        <h2 class="title is-3">Ablation studies on Geometry3K.</h2>
+        <table class="js-sort-table" id="results">
+          <thead>
+            <tr>
+              <th rowspan="2" class="js-sort-number" style="vertical-align: middle; color: gray;">Self-limited Decoder</th>
+              <th rowspan="2" class="js-sort-number" style="vertical-align: middle; color: gray;">Data Aug</th>
+              <th rowspan="2" class="js-sort-number" style="vertical-align: middle; color: gray;">Structural Clauses</th>
+              <th rowspan="2" class="js-sort-number" style="vertical-align: middle; color: gray;">Pre-trained LM</th>
+              <th colspan="3" class="js-sort-number" style="vertical-align: middle; color: gray;">Ans acc</th>
+              <th colspan="3" class="js-sort-number" style="vertical-align: middle; color: gray;">Prog acc</th>
+            </tr>
+            <tr>
+              <th class="js-sort-number" style="vertical-align: middle; color: gray;">Completion</th>
+              <th class="js-sort-number" style="vertical-align: middle; color: gray;">Choice</th>
+              <th class="js-sort-number" style="vertical-align: middle; color: gray;">Top-3</th>
+              <th class="js-sort-number" style="vertical-align: middle; color: gray;">Completion</th>
+              <th class="js-sort-number" style="vertical-align: middle; color: gray;">Choice</th>
+              <th class="js-sort-number" style="vertical-align: middle; color: gray;">Top-3</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>✔</td>
+              <td>✘</td>
+              <td>✔</td>
+              <td>✘</td>
+              <td>32.5</td>
+              <td>52.2</td>
+              <td>57.6</td>
+              <td>27.2</td>
+              <td>47.3</td>
+              <td>53.1</td>
+            </tr>
+            <tr>
+              <td>✘</td>
+              <td>✔</td>
+              <td>✔</td>
+              <td>✘</td>
+              <td>28.2</td>
+              <td>48.3</td>
+              <td>50.7</td>
+              <td>25.4</td>
+              <td>42.7</td>
+              <td>45.6</td>
+            </tr>
+            <tr>
+              <td>✔</td>
+              <td>✔</td>
+              <td>✔</td>
+              <td>✘</td>
+              <td>36.6</td>
+              <td>59.5</td>
+              <td>62.4</td>
+              <td>33.9</td>
+              <td>52.8</td>
+              <td>58.6</td>
+            </tr>
+            <tr>
+              <td>✔</td>
+              <td>✔</td>
+              <td>✘</td>
+              <td>✘</td>
+              <td>38.4</td>
+              <td>61.7</td>
+              <td>64.8</td>
+              <td>34.8</td>
+              <td>54.2</td>
+              <td>59.2</td>
+            </tr>
+            <tr>
+              <td>✔</td>
+              <td>✔</td>
+              <td>✔</td>
+              <td>✔</td>
+              <td>48.1</td>
+              <td>67.5</td>
+              <td>71.4</td>
+              <td>45.4</td>
+              <td>62.0</td>
+              <td>68.1</td>
+            </tr>
+            <tr>
+              <td>✔</td>
+              <td>✔</td>
+              <td>✔</td>
+              <td>✔</td>
+              <td><b class="best-score-text">65.0</b></td>
+              <td><b class="best-score-text">77.9</b></td>
+              <td><b class="best-score-text">80.7</b></td>
+              <td><b class="best-score-text">62.8</b></td>
+              <td><b class="best-score-text">72.4</b></td>
+              <td><b class="best-score-text">78.2</b></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div>
+          <p>🚨 For more details, please refer to <a href="https://arxiv.org/pdf/2302.11097">this link</a> 
+          </p>
+        </div>
         </div>
       </div>
     </div>
@@ -736,22 +815,23 @@
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title is-3 has-text-centered">BibTeX</h2>
-    <pre><code>@article{zhang2024geoeval,
-      title={GeoEval: benchmark for evaluating LLMs and Multi-Modal Models on geometry problem-solving},
-      author={Zhang, Jiaxin and Li, Zhongzhi and Zhang, Mingliang and Yin, Fei and Liu, Chenglin and Moshfeghi, Yashar},
-      journal={arXiv preprint arXiv:2402.10104},
-      year={2024}
-    }</code></pre>
+    <pre><code>@inproceedings{Zhang2023PGPS,
+      title     = {A Multi-Modal Neural Geometric Solver with Textual Clauses Parsed from Diagram},
+      author    = {Zhang, Ming-Liang and Yin, Fei and Liu, Cheng-Lin},
+      booktitle = {IJCAI},
+      year      = {2023},
+    }
+    </code></pre>
   </div>
 </section>
 
 <section>
   <div class="section" id="org-banners" style="display:flex">
-    <a href="https://www.ucas.edu.cn/" target="_blank" rel="external">
-        <img class="center-block org-banner" src="static/images/ucas_logo.png" style="width: 400px; height: 200px;">
+    <a href="https://ia.cas.cn/" target="_blank" rel="external">
+        <img class="center-block org-banner" src="static/images/CASIA logo.png" style="width: 400px; height: 200px;">
     </a>
-    <a href="https://www.strath.ac.uk/" target="blank" class="ext-link">
-        <img class="center-block org-banner" src="static/images/Strathclyde.png" style="width: 400px; height: 200px;">
+    <a href="https://www.ucas.edu.cn/" target="blank" class="ext-link">
+        <img class="center-block org-banner" src="static/images/ucas_logo.png" style="width: 400px; height: 200px;">
     </a>
   </div>
 </section>

@@ -1,13 +1,14 @@
-# LANS
+# PGPSNet
 
-This is the repository that contains source code for the [LANS website](https://eternal8080.github.io/LANS.github.io/).
+This is the repository that contains source code for the [PGPSNet website](https://eternal8080.github.io/PGPSNet.github.io/).
 
-If you find GeoEval useful for your work please cite:
+If you find PGPSNet useful for your work please cite:
 ```
-@article{zhang2023lans,
-  title={LANS: A layout-aware neural solver for plane geometry problem},
-  author={Zhang, Ming-Liang and Li, Zhong-Zhi and Yin, Fei and Liu, Cheng-Lin},
-  journal={arXiv preprint arXiv:2311.16476},
+@inproceedings{zhang2023multi,
+  title={A multi-modal neural geometric solver with textual clauses parsed from diagram},
+  author={Zhang, Ming-Liang and Yin, Fei and Liu, Cheng-Lin},
+  booktitle={Proceedings of the Thirty-Second International Joint Conference on Artificial Intelligence},
+  pages={3374--3382},
   year={2023}
 }
 ```
